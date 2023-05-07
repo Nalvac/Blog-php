@@ -58,7 +58,7 @@
                         <h2><?= $cat ?></h2>
                         <div class="articles-container"> 
                             <?php foreach($articleParCategories[$cat] as $a) :?>
-                                <a href='/show-article.php/?id=<?= $a['id'] ?>' class="article block">
+                                <a href='/show-article.php?id=<?= $a['id'] ?>' class="article block">
                                     <div class="overflow">
                                         <div class="img-container" style="background-image:url(<?= $a['image'] ?>)"></div>
                                     </div>
@@ -71,7 +71,7 @@
                             <h2><?= $selectedCat?></h2>
                             <div class="articles-container"> 
                             <?php foreach($articleParCategories[$selectedCat] as $a) :?>
-                                <a href='/show-article.php/?id=<?= $a['id'] ?>' class="article block">
+                                <a href='/show-article.php?id=<?= $a['id'] ?>' class="article block">
                                     <div class="overflow">
                                         <div class="img-container" style="background-image:url(<?= $a['image'] ?>)"></div>
                                     </div>
