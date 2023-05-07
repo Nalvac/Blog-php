@@ -55,7 +55,7 @@
                 <div class="newsfeed-content">
                     <?php  if (!$selectedCat): ?>
                         <?php foreach($categories as $cat=> $num): ?>
-                        <h2><?= $cat ?></h2>
+                        <h2><?=  mb_convert_case($cat, MB_CASE_TITLE)   ?></h2>
                         <div class="articles-container"> 
                             <?php foreach($articleParCategories[$cat] as $a) :?>
                                 <a href='/show-article.php?id=<?= $a['id'] ?>' class="article block">
@@ -68,7 +68,7 @@
                         </div>
                         <?php endforeach?>
                     <?php else : ?>
-                            <h2><?= $selectedCat?></h2>
+                            <h2><?=  mb_convert_case($selectedCat, MB_CASE_TITLE)  ?></h2>
                             <div class="articles-container"> 
                             <?php foreach($articleParCategories[$selectedCat] as $a) :?>
                                 <a href='/show-article.php?id=<?= $a['id'] ?>' class="article block">
