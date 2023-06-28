@@ -8,7 +8,6 @@ if (!$id) {
     header('Location: /');
 } else {
     if (file_exists($filename)) {
-        echo $id;
         $articles = json_decode(file_get_contents($filename), true) ?? [];
         $articleIndex = array_search($id, array_column($articles, 'id'));
         array_splice($articles, $articleIndex, 1);
